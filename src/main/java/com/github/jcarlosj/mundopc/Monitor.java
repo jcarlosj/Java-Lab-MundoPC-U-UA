@@ -43,7 +43,19 @@ public class Monitor {
 
     @Override
     public String toString() {
-        return "Monitor [ ID: " + ID + ", brand: " + brand + ", size: " + size + " ]";
+
+        // StringBuilder: Almacena cadenas de caracteres.
+        StringBuilder sb = new StringBuilder();
+
+        // StringBuilder: Su tamaño y contenido pueden modificarse. Los objetos de éste tipo son mutables. Esto es una diferencia con los String
+        sb .append( "{ " );
+        sb .append( "id: " ) .append( this .ID + ", " );
+        sb .append( "brand: " ) .append( this .brand + ", " );
+        sb .append( "size: " ) .append( this .size );
+        //sb .append( "memoria: " ) .append( super .toString() );        //  Agregamos los datos de la clase padre (Direccion de memoria)
+        sb .append( " }" );
+
+        return sb .toString();
     }
 
 }

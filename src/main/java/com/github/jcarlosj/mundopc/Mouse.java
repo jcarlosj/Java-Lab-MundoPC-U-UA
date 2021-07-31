@@ -14,7 +14,17 @@ public class Mouse extends Device {
 
     @Override
     public String toString() {
-        return "Mouse { ID: " + ID + ", " + super.toString() + " }";
+
+        // StringBuilder: Almacena cadenas de caracteres.
+        StringBuilder sb = new StringBuilder();
+
+        // StringBuilder: Su tamaño y contenido pueden modificarse. Los objetos de éste tipo son mutables. Esto es una diferencia con los String
+        sb .append( "{ " );
+        sb .append( "id: " ) .append( this .ID );
+        sb .append( super .toString() );        //  Agregamos los datos de la clase padre (Direccion de memoria)
+        sb .append( " }" );
+
+        return sb .toString();
     }
 
 }

@@ -66,7 +66,21 @@ public class Computer {
 
     @Override
     public String toString() {
-        return "Computer ( ID: " + ID + ", keyboard: " + keyboard + ", monitor: " + monitor + ", mouse: " + mouse + ", name: " + name + " )";
+
+        // StringBuilder: Almacena cadenas de caracteres.
+        StringBuilder sb = new StringBuilder();
+
+        // StringBuilder: Su tamaño y contenido pueden modificarse. Los objetos de éste tipo son mutables. Esto es una diferencia con los String
+        sb .append( "  Computador: [ " );
+        sb .append( "id: " ) .append( this .ID + ", " );
+        sb .append( "name: " ) .append( this .name + ", " );
+        sb .append( "monitor: " ) .append( this .monitor + ", " );
+        sb .append( "keyboard: " ) .append( this .keyboard + ", " );
+        sb .append( "mouse: " ) .append( this .mouse + ", " );
+        //sb .append( "memoria: " ) .append( super .toString() );        //  Agregamos los datos de la clase padre (Direccion de memoria)
+        sb .append( " ]" );
+
+        return sb .toString();
     }
 
 }

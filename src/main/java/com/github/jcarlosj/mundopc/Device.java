@@ -27,7 +27,16 @@ public class Device {
 
     @Override
     public String toString() {
-        return "Device [ brand: " + brand + ", inputType: " + inputType + " ]";
+
+        // StringBuilder: Almacena cadenas de caracteres.
+        StringBuilder sb = new StringBuilder();
+
+        // StringBuilder: Su tamaño y contenido pueden modificarse. Los objetos de éste tipo son mutables. Esto es una diferencia con los String
+        sb .append( "inputType: " ) .append( this .inputType + ", " );
+        sb .append( "brand: " ) .append( this .brand );
+        //sb .append( "memoria: " ) .append( super .toString() );        //  Agregamos los datos de la clase padre (Direccion de memoria)
+
+        return sb .toString();
     }
 
 }
