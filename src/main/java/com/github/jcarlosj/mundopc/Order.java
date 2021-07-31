@@ -28,7 +28,7 @@ public class Order {
     }
     
     public void showOrder() {
-        System .out .println( "===== ID Orden: " + this .ID + " =====\n" );
+        System .out .println( "===== ID Orden: " + this .ID + " =====" );
         System.out.println( this .totalProducts > 0 ? "Productos: " : "Orden sin productos.." );
 
         for( int i = 0; i < this .totalProducts; i++ ) {
